@@ -16,11 +16,15 @@ nav{
     height: 80px;
     background-color: black;
     color: white;
+    position: relative;
+    margin: auto;
 }
 
 .nav-container{
+    /* position: absolute; */
     padding: 10px;
-    width: 60%;
+    width: 50%;
+    height: 60px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -28,11 +32,12 @@ nav{
 }
 
 
+
 .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    ;
+    
 }
 .logo a{
     font-size: 25px;
@@ -48,3 +53,52 @@ nav{
     width: 25px;
     height: 25px;
 }
+
+
+.nav-rigth button{
+    grid-area: button;
+    position: relative;
+    top: 10px;
+    background-color: #636e72;
+    border:2px solid #fdcb6e;
+    border-radius: 20px;
+    width: 150px;
+    height: 26px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fdcb6e;
+    justify-self: flex-end;
+
+}
+.nav-rigth span{
+    position: relative;
+    top: 20px;
+    grid-area: telefono;
+    font-size: 10px;
+}
+.nav-rigth #facebook>img{
+    grid-area: facebook;
+    width: 23px;
+    height: 23px;
+    position: relative;
+    top:10px;
+
+}
+.nav-rigth #instagram>img{
+    grid-area: instagram;
+    width: 23px;
+    height: 23px;
+    position: relative;
+    top: 10px;
+}
+
+.nav-rigth{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    grid-template-areas: "button facebook"
+    "telefono instagram";
+}
+
