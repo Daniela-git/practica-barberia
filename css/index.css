@@ -17,8 +17,9 @@ header {
 	color: white;
 	position: relative;
 	margin: auto;
-	position: fixed;
-	/* top: 0; */
+	position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav-container {
@@ -101,68 +102,6 @@ header {
 		"button facebook"
 		"telefono instagram";
 }
-
-/* inicio */
-#inicio {
-	text-align: center;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	align-content: center;
-    height: 100vh;
-    position: relative;
-}
-#video-inicio {
-    position: fixed;
-    top:100px;
-	min-width: 100%;
-    min-height: 100vh;
-    opacity: 0.85;
-}
-#inicio div > h2,
-#inicio div > h3 {
-	font-family: "Raleway", sans-serif;
-	letter-spacing: 0.15em;
-	font-size: 90px;
-    font-weight: 500px;
-    position: relative;
-}
-#inicio div > h3 {
-	position: relative;
-	text-align: center;
-	color: white;
-	top: -55px;
-}
-#inicio div {
-	height: 25vh;
-	margin-top: 30vh;
-}
-
-#inicio p {
-	font-family: "Raleway", sans-serif;
-	margin-top: -3em;
-	font-size: 10px;
-    color: white;
-    position: relative;
-}
-
-#inicio span {
-	font-family: "Raleway", sans-serif;
-	margin-top: 0.3em;
-	font-size: 14px;
-    color: white;
-    position: relative;
-}
-#inicio button {
-	width: 150px;
-	height: 45px;
-	align-self: center;
-    margin-top: 2em;
-    position: relative;
-    background-color: transparent;
-    border: 4px solid white;
-    color: white;
-}
 /* footer */
 footer {
 	position: fixed;
@@ -172,6 +111,7 @@ footer {
 	background-color: rgb(49, 48, 48);
 	color: white;
     margin: auto;
+    z-index: 1;
 }
 .nav-footer, .copy{
     width: 100%;
@@ -206,3 +146,90 @@ footer {
     padding-top: 10px;
     font-size: 13px;
 }
+/* inicio */
+
+#main-inicio{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    
+}
+
+
+#video-inicio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
+    z-index: -10;
+}
+#inicio {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+    align-content: center;
+    position: relative;
+    width: 100%;
+    
+}
+#inicio div > h2,
+#inicio div > h3 {
+	font-family: "Raleway", sans-serif;
+	letter-spacing: 0.15em;
+	font-size: 90px;
+    font-weight: 500px;
+}
+#inicio div > h3 {
+	position: relative;
+	text-align: center;
+	color: white;
+	top: -55px;
+}
+#inicio div {
+	height: 25vh;
+    margin-top: 25vh;
+}
+
+#inicio p {
+	font-family: "Raleway", sans-serif;
+	margin-top: -3em;
+	font-size: 10px;
+    color: white;
+}
+
+#inicio span {
+	font-family: "Raleway", sans-serif;
+	margin-top: 0.3em;
+	font-size: 14px;
+    color: white;
+}
+#inicio button {
+	width: 150px;
+	height: 45px;
+	align-self: center;
+    margin-top: 2em;
+    background-color: transparent;
+    border: 4px solid white;
+    color: white;
+}
+
+/* horario */
+
+#horario{
+    height: 100vh;
+    background-image: url("/images/horario.jpg");
+    color: white;
+
+}
+
+
+
+
+
+
+
+
+
+
