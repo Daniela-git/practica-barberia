@@ -11,19 +11,21 @@ a{
 }
 /* novbar */
 
-nav{
+header{
     width: 100%;
     height: 80px;
     background-color: black;
     color: white;
     position: relative;
     margin: auto;
+    position: sticky;
+    top: 0;
 }
 
 .nav-container{
     /* position: absolute; */
     padding: 10px;
-    width: 50%;
+    width: 60%;
     height: 60px;
     margin: auto;
     display: flex;
@@ -43,6 +45,8 @@ nav{
     font-size: 25px;
     color: white;
     margin-left: 5px;
+    /* text-align: justify;
+    text-justify: inter-character; */
 
 }
 .logo a>span{
@@ -69,6 +73,9 @@ nav{
     color: #fdcb6e;
     justify-self: flex-end;
 
+}
+.nav-rigth button:hover{
+    border:none;
 }
 .nav-rigth span{
     position: relative;
@@ -100,5 +107,46 @@ nav{
     column-gap: 10px;
     grid-template-areas: "button facebook"
     "telefono instagram";
+}
+
+
+/* inicio */
+#inicio{
+    text-align: center;
+    margin:auto;
+}
+
+
+
+
+
+/* footer */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(49, 48, 48);
+    color: white;
+    margin: auto;
+    
+}
+
+.nav-footer ul{
+    width: 50%;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-footer ul>li>a{
+    font-family: 'Spinnaker', sans-serif;
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+.nav-footer ul>li>a:hover, .nav-footer ul>li>a:active {
+    color: #b2bec3;
 }
 
