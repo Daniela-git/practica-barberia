@@ -189,11 +189,12 @@ footer {
 #inicio div {
 	height: 25vh;
 	margin-top: 20vh;
+	/* margin-bottom: 3em; */
 }
 
 #inicio p {
 	font-family: "Raleway", sans-serif;
-	margin-top: -3em;
+	/* margin-top: -3em; */
 	font-size: 10px;
 	color: white;
 	position: relative;
@@ -293,7 +294,7 @@ footer {
 		"servicio4 servicio3 servicio3"
 		"servicio5 servicio5 servicio6"
 		"servicio8 servicio7 servicio7";
-	gap: 2px;
+	gap: 10px;
 }
 .fotos img {
 	width: 100%;
@@ -359,15 +360,24 @@ footer {
 
 /********** large  **********/
 @media (min-width: 1200px) {
+	#video-inicio {
+		width: 100vw;
+	}
 }
 
 /********** medium **********/
 @media (min-width: 992px) and (max-width: 1199px) {
+	#video-inicio {
+		width: 100vw;
+	}
 }
 /********** small **********/
 @media (min-width: 768px) and (max-width: 991px) {
-	/* navbar */
 
+
+	#video-inicio {
+		width: 100vw;
+	}
 	/* footer */
 	.nav-footer ul > li > a {
 		font-size: 10px;
@@ -376,6 +386,26 @@ footer {
 	/* inico */
 	#main-inicio {
 		height: 80vh;
+	}
+
+	/* servicios */
+	.servicios{
+		flex-direction: column;
+
+	}
+	.fotos{
+		width: 100%;
+	}
+	.lista-servicios ul{
+		width: 100%;
+	}
+
+	.fotos{
+		grid-template-areas:
+		"servicio1 servicio2 servicio4"
+		"servicio3 servicio3 servicio3"
+		"servicio5 servicio6 servicio8"
+		"servicio7 servicio7 servicio7";
 	}
 }
 
@@ -434,7 +464,7 @@ footer {
 		height: 60vh;
 	}
 	#video-inicio {
-		width: auto;
+		width: 100vw;
 		top: 0;
 		height: 60vh;
 	}
@@ -467,21 +497,45 @@ footer {
 		justify-content: center;
 		text-align: center;
 	}
-	/*
-	.horario h3,
-	.horario h3 > span,
-	.horario i,
-	.horario ul > li {
-		font-size: 1em;
-	} */
-
 	.horario i {
 		display: none;
 	}
 	#main-horario {
-		height: 30vh;
+		height: 40vh;
 	}
 	.horario {
 		top: 15px;
+	}
+
+	/* servicios */
+	.servicios{
+		flex-direction: column;
+
+	}
+	.fotos{
+		width: 100%;
+	}
+	.lista-servicios ul{
+		width: 100%;
+	}
+
+	.fotos{
+		grid-template-columns: repeat(6,1fr);
+		grid-template-rows: repeat(4, 200px);
+		grid-template-areas:
+		"servicio2 servicio2 servicio5 servicio7 servicio6 servicio6"
+		"servicio2 servicio2 servicio4 servicio4 servicio6 servicio6"
+		"servicio2 servicio2 servicio4 servicio4 servicio8 servicio8"
+		"servicio1 servicio3 servicio4 servicio4 servicio8 servicio8";
+		gap: 0;
+	}
+	#servicio2, #servicio4{
+		height: 600PX;
+	}
+	#servicio1,#servicio3,#servicio5,#servicio7{
+		height: 200px;
+	}
+	#servicio6,#servicio8{
+		height: 400px;
 	}
 }
