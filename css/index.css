@@ -8,6 +8,9 @@
 a {
 	text-decoration: none;
 }
+body{
+	background-color: black;
+}
 /*********** novbar ***********/
 
 header {
@@ -151,10 +154,7 @@ footer {
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	background-color: rgb(0, 0, 0);
-	z-index: -2;
 }
-
 #video-inicio {
 	position: absolute;
 	top: 0;
@@ -265,17 +265,16 @@ footer {
 }
 
 /************ servicios ************/
-#main-servicios{
-	background-color:black;
-	
+#main-servicios {
+	background-color: black;
 }
-#main-servicios h3{
+#main-servicios h3 {
 	font-family: "Raleway", sans-serif;
 	font-size: 45px;
 	color: white;
 	height: 1.5em;
 	text-align: center;
-	padding-top: .2em;
+	padding-top: 0.2em;
 }
 .servicios {
 	background-color: black;
@@ -300,11 +299,10 @@ footer {
 	width: 100%;
 	height: 300px;
 }
-.fotos img:hover{
-	filter: sepia(40%)opacity(0.7);
-
+.fotos img:hover {
+	filter: sepia(40%) opacity(0.7);
 }
-.lista-servicios{
+.lista-servicios {
 	background-color: white;
 }
 .lista-servicios ul {
@@ -319,7 +317,7 @@ footer {
 	align-items: space-between;
 	/* text-align: center; */
 }
-.lista-servicios li{
+.lista-servicios li {
 	width: 85%;
 	color: #636e72;
 	border-bottom: 2px solid #fdcb6e;
@@ -361,7 +359,7 @@ footer {
 /********** large  **********/
 @media (min-width: 1200px) {
 	#video-inicio {
-		width: 100vw;
+		/* width: 100vw; */
 	}
 }
 
@@ -373,8 +371,6 @@ footer {
 }
 /********** small **********/
 @media (min-width: 768px) and (max-width: 991px) {
-
-
 	#video-inicio {
 		width: 100vw;
 	}
@@ -389,23 +385,22 @@ footer {
 	}
 
 	/* servicios */
-	.servicios{
+	.servicios {
 		flex-direction: column;
-
 	}
-	.fotos{
+	.fotos {
 		width: 100%;
 	}
-	.lista-servicios ul{
+	.lista-servicios ul {
 		width: 100%;
 	}
 
-	.fotos{
+	.fotos {
 		grid-template-areas:
-		"servicio1 servicio2 servicio4"
-		"servicio3 servicio3 servicio3"
-		"servicio5 servicio6 servicio8"
-		"servicio7 servicio7 servicio7";
+			"servicio1 servicio2 servicio4"
+			"servicio3 servicio3 servicio3"
+			"servicio5 servicio6 servicio8"
+			"servicio7 servicio7 servicio7";
 	}
 }
 
@@ -508,34 +503,38 @@ footer {
 	}
 
 	/* servicios */
-	.servicios{
+	.servicios {
 		flex-direction: column;
-
 	}
-	.fotos{
+	.fotos {
 		width: 100%;
 	}
-	.lista-servicios ul{
+	.lista-servicios ul {
 		width: 100%;
 	}
 
-	.fotos{
-		grid-template-columns: repeat(6,1fr);
+	.fotos {
+		grid-template-columns: repeat(6, 1fr);
 		grid-template-rows: repeat(4, 200px);
 		grid-template-areas:
-		"servicio2 servicio2 servicio5 servicio7 servicio6 servicio6"
-		"servicio2 servicio2 servicio4 servicio4 servicio6 servicio6"
-		"servicio2 servicio2 servicio4 servicio4 servicio8 servicio8"
-		"servicio1 servicio3 servicio4 servicio4 servicio8 servicio8";
+			"servicio2 servicio2 servicio5 servicio7 servicio6 servicio6"
+			"servicio2 servicio2 servicio4 servicio4 servicio6 servicio6"
+			"servicio2 servicio2 servicio4 servicio4 servicio8 servicio8"
+			"servicio1 servicio3 servicio4 servicio4 servicio8 servicio8";
 		gap: 0;
 	}
-	#servicio2, #servicio4{
-		height: 600PX;
+	#servicio2,
+	#servicio4 {
+		height: 600px;
 	}
-	#servicio1,#servicio3,#servicio5,#servicio7{
+	#servicio1,
+	#servicio3,
+	#servicio5,
+	#servicio7 {
 		height: 200px;
 	}
-	#servicio6,#servicio8{
+	#servicio6,
+	#servicio8 {
 		height: 400px;
 	}
 }
