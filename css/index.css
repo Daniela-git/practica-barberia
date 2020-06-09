@@ -287,7 +287,7 @@ footer {
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 200px);
+	grid-template-rows: repeat(4, 300px);
 	grid-template-areas:
 		"servicio1 servicio1 servicio2"
 		"servicio4 servicio3 servicio3"
@@ -297,7 +297,11 @@ footer {
 }
 .fotos img {
 	width: 100%;
-	height: 200px;
+	height: 300px;
+}
+.fotos img:hover{
+	filter: sepia(40%)opacity(0.7);
+
 }
 .lista-servicios{
 	background-color: white;
@@ -314,10 +318,17 @@ footer {
 	align-items: space-between;
 	/* text-align: center; */
 }
-.lista-servicios ul>li{
-	width: 100%;
+.lista-servicios li{
+	width: 85%;
+	color: #636e72;
 	border-bottom: 2px solid #fdcb6e;
 	justify-self: space-between;
+	margin-left: 40px;
+	padding: 20px;
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
 }
 #servicio1 {
 	grid-area: servicio1;
