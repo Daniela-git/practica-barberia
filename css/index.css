@@ -224,7 +224,7 @@ footer {
 /************ horario ************/
 
 #main-horario {
-	min-height: 150px;
+	height: 150px;
 	color: white;
 	background-color: #c4cacd;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52' viewBox='0 0 52 52'%3E%3Cpath fill='%23ddded4' fill-opacity='0.4' d='M0 17.83V0h17.83a3 3 0 0 1-5.66 2H5.9A5 5 0 0 1 2 5.9v6.27a3 3 0 0 1-2 5.66zm0 18.34a3 3 0 0 1 2 5.66v6.27A5 5 0 0 1 5.9 52h6.27a3 3 0 0 1 5.66 0H0V36.17zM36.17 52a3 3 0 0 1 5.66 0h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 0 1 0-5.66V52H36.17zM0 31.93v-9.78a5 5 0 0 1 3.8.72l4.43-4.43a3 3 0 1 1 1.42 1.41L5.2 24.28a5 5 0 0 1 0 5.52l4.44 4.43a3 3 0 1 1-1.42 1.42L3.8 31.2a5 5 0 0 1-3.8.72zm52-14.1a3 3 0 0 1 0-5.66V5.9A5 5 0 0 1 48.1 2h-6.27a3 3 0 0 1-5.66-2H52v17.83zm0 14.1a4.97 4.97 0 0 1-1.72-.72l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1 0-5.52l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43c.53-.35 1.12-.6 1.72-.72v9.78zM22.15 0h9.78a5 5 0 0 1-.72 3.8l4.44 4.43a3 3 0 1 1-1.42 1.42L29.8 5.2a5 5 0 0 1-5.52 0l-4.43 4.44a3 3 0 1 1-1.41-1.42l4.43-4.43a5 5 0 0 1-.72-3.8zm0 52c.13-.6.37-1.19.72-1.72l-4.43-4.43a3 3 0 1 1 1.41-1.41l4.43 4.43a5 5 0 0 1 5.52 0l4.43-4.43a3 3 0 1 1 1.42 1.41l-4.44 4.43c.36.53.6 1.12.72 1.72h-9.78zm9.75-24a5 5 0 0 1-3.9 3.9v6.27a3 3 0 1 1-2 0V31.9a5 5 0 0 1-3.9-3.9h-6.27a3 3 0 1 1 0-2h6.27a5 5 0 0 1 3.9-3.9v-6.27a3 3 0 1 1 2 0v6.27a5 5 0 0 1 3.9 3.9h6.27a3 3 0 1 1 0 2H31.9z'%3E%3C/path%3E%3C/svg%3E");
@@ -235,7 +235,7 @@ footer {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	top: 50px;
+	top: 45px;
 }
 
 .horario h3 {
@@ -264,16 +264,70 @@ footer {
 	font-size: 20px;
 }
 
-/* media queries */
+/************ servicios ************/
+.servicios {
+	background-color: black;
+	width: 100%;
+	display: flex;
+	/* justify-content:space-evenly; */
+}
+.fotos {
+	width: 50%;
+	height: auto;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, 300px);
+	grid-template-areas:
+		"servicio1 servicio1 servicio2"
+		"servicio4 servicio3 servicio3"
+		"servicio5 servicio5 servicio6"
+		"servicio8 servicio7 servicio7";
+	gap: 2px;
+}
+.fotos img {
+	width: 100%;
+	height: 300px;
+}
+.lista-servicios ul {
+	color: white;
+	list-style: none;
+	text-transform: capitalize;
+}
+#servicio1 {
+	grid-area: servicio1;
+}
+#servicio2 {
+	grid-area: servicio2;
+}
+#servicio3 {
+	grid-area: servicio3;
+}
+#servicio4 {
+	grid-area: servicio4;
+}
+#servicio5 {
+	grid-area: servicio5;
+}
+#servicio6 {
+	grid-area: servicio6;
+}
+#servicio7 {
+	grid-area: servicio7;
+}
+#servicio8 {
+	grid-area: servicio8;
+}
 
-/* large  */
+/*********** media queries ***********/
+
+/********** large  **********/
 @media (min-width: 1200px) {
 }
 
-/* medium */
+/********** medium **********/
 @media (min-width: 992px) and (max-width: 1199px) {
 }
-/* small */
+/********** small **********/
 @media (min-width: 768px) and (max-width: 991px) {
 	/* navbar */
 	.logo a {
@@ -289,63 +343,74 @@ footer {
 	#main-inicio {
 		height: 80vh;
 	}
-	#video-inicio{
-		display: none;
-	}
 }
 
-/* extra small */
+/********** extra small **********/
 @media (max-width: 767px) {
 	/* navbar */
 
-	.nav-rigth {
+	header{
+		height: 150px;
+	}
+	.nav-container {
+		width: 80%;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+	}
+	.nav-rigth{
+		margin: 0;
 		grid-template-columns: 1fr;
-		grid-template-rows: auto auto;
-		grid-template-areas: "facebook instagram";
+		grid-template-areas: 
+		"button"
+		"telefono";
 	}
-	.logo a {
-		font-size: 1em;
-	}
-	.nav-rigth button,
-	.nav-rigth span {
-		display: none;
+	.nav-rigth button{
+		width: 200px;
+		height: 40px;
+		justify-self: center;
+		font-size: 15px;
 	}
 
+	.redes{
+		display: flex;
+		justify-content: center;
+	}
+	.redes #facebook ,
+	.redes #instagram{
+		margin-right: 5px;
+		width: 20px;
+		height: 20px;
+	}
 	.nav-rigth #facebook > img,
 	.nav-rigth #instagram > img {
-		width: 15px;
-		height: 15px;
-		top: 0px;
+		margin-top: 15px;
+		width: 20px;
+		height: 20px;
 	}
+
 	/* footer */
-	.nav-footer ul > li > a {
-		font-size: 50%;
-	}
-
-	.nav-footer ul {
-		width: 70%;
-	}
-
-	.copy p {
-		font-size: 10px;
+	footer {
+		display: none;
 	}
 
 	/* inicio */
 	#main-inicio {
-		height: 70vh;
+		height: 60vh;
 	}
-	#video-inicio{
-		display: none;
+	#video-inicio {
+		
+		height: 60vh;
+	}
+	#inicio div {
+		height: 100px;
+		margin-top: 5px;
 	}
 	#inicio div > h2,
 	#inicio div > h3 {
 		letter-spacing: 0.1em;
-		font-size: 5em;
+		font-size: 4.5em;
 		font-weight: 500px;
-	}
-	#inicio div {
-		height: 120px;
-		margin-top: 20vh;
 	}
 	#inicio p {
 		margin-top: 2px;
@@ -353,6 +418,22 @@ footer {
 	#inicio button {
 		width: 100px;
 		height: auto;
+		padding: 5px;
 		font-size: 10px;
+		border: 2px solid white;
+	}
+
+	/* horario */
+	.horario h3,
+	.horario h3 > span,
+	.horario i,
+	.horario ul > li {
+		font-size: 1em;
+	}
+	#main-horario {
+		height: 100px;
+	}
+	.horario {
+		top: 15px;
 	}
 }
