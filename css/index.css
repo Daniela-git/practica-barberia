@@ -18,8 +18,8 @@ header {
 	position: relative;
 	margin: auto;
 	position: sticky;
-    top: 0;
-    z-index: 1;
+	top: 0;
+	z-index: 1;
 }
 
 .nav-container {
@@ -67,6 +67,7 @@ header {
 	font-weight: bold;
 	color: #fdcb6e;
 	justify-self: flex-end;
+	cursor: pointer;
 }
 .nav-rigth button:hover {
 	border: none;
@@ -79,17 +80,17 @@ header {
 }
 .nav-rigth #facebook > img {
 	grid-area: facebook;
-	width: 23px;
-	height: 23px;
-	position: relative;
-	top: 10px;
 }
 .nav-rigth #instagram > img {
 	grid-area: instagram;
+}
+.nav-rigth #facebook > img,
+.nav-rigth #instagram > img {
 	width: 23px;
 	height: 23px;
 	position: relative;
 	top: 10px;
+	cursor: pointer;
 }
 
 .nav-rigth {
@@ -110,12 +111,13 @@ footer {
 	height: 80px;
 	background-color: rgb(49, 48, 48);
 	color: white;
-    margin: auto;
-    z-index: 1;
+	margin: auto;
+	z-index: 1;
 }
-.nav-footer, .copy{
-    width: 100%;
-    height: 40px;
+.nav-footer,
+.copy {
+	width: 100%;
+	height: 40px;
 }
 .nav-footer ul {
 	width: 50%;
@@ -136,137 +138,123 @@ footer {
 	color: #b2bec3;
 }
 
-.copy{
-    background-color: white;
-    color: gray;
-    text-align: center;
-    
+.copy {
+	background-color: white;
+	color: gray;
+	text-align: center;
 }
-.copy p{
-    padding-top: 10px;
-    font-size: 13px;
+.copy p {
+	padding-top: 10px;
+	font-size: 13px;
 }
 /* inicio */
 
-#main-inicio{
-    position: relative;
-    width: 100%;
-    height: 80vh;
-    
+#main-inicio {
+	position: relative;
+	width: 100%;
+	height: 80vh;
 }
 
 #video-inicio {
-    position: absolute;
-    /* left: 0;
+	position: absolute;
+	/* left: 0;
     top: 0; */
-    width: 100%;
-    height: auto;
-    opacity: 0.7;
-    z-index: -10;
+	width: 100%;
+	height: auto;
+	opacity: 0.7;
+	z-index: -10;
 }
 #inicio {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-    align-content: center;
-    position: relative;
-    width: 100%;
-    
+	align-content: center;
+	position: relative;
+	width: 100%;
 }
 #inicio div > h2,
 #inicio div > h3 {
 	font-family: "Raleway", sans-serif;
 	letter-spacing: 0.15em;
 	font-size: 90px;
-    font-weight: 500px;
+	font-weight: 500px;
 }
 #inicio div > h3 {
 	position: relative;
-    text-align: center;
-    font-size: 95px;
+	text-align: center;
+	font-size: 95px;
 	color: white;
 	top: -55px;
 }
 #inicio div {
 	height: 25vh;
-    margin-top: 20vh;
+	margin-top: 20vh;
 }
 
 #inicio p {
 	font-family: "Raleway", sans-serif;
 	margin-top: -3em;
 	font-size: 10px;
-    color: white;
-    /* font-weight: bold; */
+	color: white;
+	/* font-weight: bold; */
 }
 
 #inicio span {
 	font-family: "Raleway", sans-serif;
 	margin-top: 0.3em;
 	font-size: 14px;
-    color: white;
+	color: white;
 }
 #inicio button {
 	width: 150px;
 	height: 45px;
 	align-self: center;
-    margin-top: 2em;
-    background-color: transparent;
-    border: 4px solid white;
-    color: white;
+	margin-top: 2em;
+	background-color: transparent;
+	border: 4px solid white;
+	color: white;
+	cursor: pointer;
 }
 #inicio button:hover {
-    background-color: white;
-    color: black;
+	background-color: white;
+	color: black;
 }
-
 
 /* horario */
 
-#main-horario{
-    height: 30vh;
-    background-image: url("/images/horario.jpg");
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    color: white;
+#main-horario {
+	height: 30vh;
+	background-image: url("/images/horario.jpg");
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	color: white;
 }
 
-
-.horario{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 50px;
-
+.horario {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: 50px;
 }
 
-.horario h3{
-    font-size: 45px;
-    font-family: "Raleway", sans-serif;
-
+.horario h3 {
+	font-size: 45px;
+	font-family: "Raleway", sans-serif;
 }
 
-
-.horario h3>span{
-    font-size: 45px;
-    font-family: "Raleway", sans-serif;
-    font-weight: lighter;
-    margin-left: 10px;
-    margin-right: 40px;
+.horario h3 > span {
+	font-size: 45px;
+	font-family: "Raleway", sans-serif;
+	font-weight: lighter;
+	margin-left: 10px;
+	margin-right: 40px;
 }
 
-.horario ul{
-    list-style: none;
-
+.horario ul {
+	list-style: none;
 }
 
-.horario ul>li{
-    font-size: 20px;
-    
+.horario ul > li {
+	font-size: 20px;
 }
-
-
-
-
-
