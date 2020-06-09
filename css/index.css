@@ -70,18 +70,18 @@ header {
 }
 .nav-rigth span {
 	position: relative;
-	top: 20px;
+	top: 10px;
 	grid-area: telefono;
 	font-size: 10px;
 }
-.nav-rigth #facebook > img {
-	grid-area: facebook;
+.redes{
+	grid-area: redes;
+	display: flex;
+	flex-direction: column;
 }
-.nav-rigth #instagram > img {
-	grid-area: instagram;
-}
-.nav-rigth #facebook > img,
-.nav-rigth #instagram > img {
+
+#facebook > img,
+#instagram > img {
 	width: 23px;
 	height: 23px;
 	position: relative;
@@ -96,8 +96,8 @@ header {
 	grid-template-rows: auto auto;
 	column-gap: 10px;
 	grid-template-areas:
-		"button facebook"
-		"telefono instagram";
+		"button redes"
+		"telefono redes";
 }
 
 /************ footer ************/
@@ -331,9 +331,7 @@ footer {
 /********** small **********/
 @media (min-width: 768px) and (max-width: 991px) {
 	/* navbar */
-	.logo a {
-		font-size: 1.2em;
-	}
+
 
 	/* footer */
 	.nav-footer ul > li > a {
@@ -364,7 +362,8 @@ footer {
 		grid-template-columns: 1fr;
 		grid-template-areas: 
 		"button"
-		"telefono";
+		"telefono"
+		"redes";
 	}
 	.nav-rigth button{
 		width: 200px;
@@ -374,7 +373,7 @@ footer {
 	}
 
 	.redes{
-		display: flex;
+		flex-direction: row;
 		justify-content: center;
 	}
 	.redes #facebook ,
@@ -385,7 +384,7 @@ footer {
 	}
 	.nav-rigth #facebook > img,
 	.nav-rigth #instagram > img {
-		margin-top: 15px;
+		margin-top: 5px;
 		width: 20px;
 		height: 20px;
 	}
