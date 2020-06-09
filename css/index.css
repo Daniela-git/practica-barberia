@@ -264,6 +264,18 @@ footer {
 }
 
 /************ servicios ************/
+#main-servicios{
+	background-color:black;
+	
+}
+#main-servicios h3{
+	font-family: "Raleway", sans-serif;
+	font-size: 45px;
+	color: white;
+	height: 1.5em;
+	text-align: center;
+	padding-top: .2em;
+}
 .servicios {
 	background-color: black;
 	width: 100%;
@@ -275,7 +287,7 @@ footer {
 	height: auto;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(4, 300px);
+	grid-template-rows: repeat(4, 200px);
 	grid-template-areas:
 		"servicio1 servicio1 servicio2"
 		"servicio4 servicio3 servicio3"
@@ -285,12 +297,27 @@ footer {
 }
 .fotos img {
 	width: 100%;
-	height: 300px;
+	height: 200px;
+}
+.lista-servicios{
+	background-color: white;
 }
 .lista-servicios ul {
-	color: white;
+	margin-top: 25px;
 	list-style: none;
 	text-transform: capitalize;
+	height: 100%;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: space-between;
+	/* text-align: center; */
+}
+.lista-servicios ul>li{
+	width: 100%;
+	border-bottom: 2px solid #fdcb6e;
+	justify-self: space-between;
 }
 #servicio1 {
 	grid-area: servicio1;
